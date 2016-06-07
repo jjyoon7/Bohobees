@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class Dashboard::EventsController < ApplicationController
   def index
     @events = Event.all
   end
