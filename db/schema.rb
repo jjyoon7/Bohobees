@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607093846) do
+ActiveRecord::Schema.define(version: 20160607110007) do
 
   create_table "events", force: :cascade do |t|
     t.date     "date"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160607093846) do
 
   add_index "events", ["user_id"], name: "index_events_on_user_id"
 
-  create_table "requests", force: :cascade do |t|
+  create_table "reservations", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "status",     default: "pending"
     t.text     "message"
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20160607093846) do
     t.datetime "updated_at",                     null: false
   end
 
-  add_index "requests", ["event_id"], name: "index_requests_on_event_id"
-  add_index "requests", ["user_id"], name: "index_requests_on_user_id"
+  add_index "reservations", ["event_id"], name: "index_reservations_on_event_id"
+  add_index "reservations", ["user_id"], name: "index_reservations_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
