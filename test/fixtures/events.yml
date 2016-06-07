@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-06-07
+  user_id: 
+  guest: 1
+  meal: MyString
+  title: MyString
+  place: MyString
+  description: MyText
+
+two:
+  date: 2016-06-07
+  user_id: 
+  guest: 1
+  meal: MyString
+  title: MyString
+  place: MyString
+  description: MyText
