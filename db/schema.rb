@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607090345) do
+ActiveRecord::Schema.define(version: 20160607093846) do
 
   create_table "events", force: :cascade do |t|
     t.date     "date"
@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(version: 20160607090345) do
 
   create_table "requests", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "status"
+    t.string   "status",     default: "pending"
     t.text     "message"
     t.integer  "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   add_index "requests", ["event_id"], name: "index_requests_on_event_id"
