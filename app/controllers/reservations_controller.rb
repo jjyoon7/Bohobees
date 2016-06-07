@@ -6,7 +6,9 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.save!
-    redirect_to reservation_path(@reservation)
+    redirect_to dashboard_path
+
+    # not sure if this path is alright?
   end
 
   private
