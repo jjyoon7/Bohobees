@@ -24,7 +24,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     @event.update(event_validation)#need validation? or params?
-    redirect_to
+    redirect_to dashboard_event_path
   end
 
   def destroy
