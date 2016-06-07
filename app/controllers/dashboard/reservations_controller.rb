@@ -9,7 +9,7 @@ class Dashboard::ReservationsController < ApplicationController
 
   def cancel
     @reservation = Reservation.find(params[:id])
-    @reservation.destroy
-    redirect_to dashboard_path
+    @reservation.status = "canceled"
+    @reservation.save!
   end
 end
