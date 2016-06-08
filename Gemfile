@@ -50,10 +50,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'pry-rails'
   gem 'binding_of_caller'
-
-
-
- e4b70c800a32215f6002d7f022258af47e0c9d10
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
