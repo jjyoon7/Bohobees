@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
   has_many :reservations # as traveller
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 end
