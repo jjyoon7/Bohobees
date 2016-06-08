@@ -1,4 +1,5 @@
 class Dashboard::EventsController < ApplicationController
+  # before_action :find_event, only [:show, :create, :edit, :update, :destroy]
   def index
     @events = Event.all
   end
@@ -23,17 +24,20 @@ class Dashboard::EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    @event.update(event_validation)#need validation? or params?
+    @event.update(event_validation)
     redirect_to dashboard_event_path
   end
 
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_path
+    redirect_to dashboard_events_path
   end
 
   private
+  # def find_event
+  #   @event = Event.find(params[:id])
+  # end
 
   def event_validation
     params.require(:event).permit(:date, :user_id, :guest, :meal, :title, :place, :description)
