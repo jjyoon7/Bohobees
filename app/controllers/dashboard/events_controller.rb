@@ -1,8 +1,5 @@
 class Dashboard::EventsController < ApplicationController
   # before_action :find_event, only [:show, :create, :edit, :update, :destroy]
-  def index
-    @events = Event.all
-  end
 
   def show
     @event = Event.find(params[:id])
