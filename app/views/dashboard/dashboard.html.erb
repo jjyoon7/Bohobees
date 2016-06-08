@@ -1,16 +1,32 @@
-<h1>Dashboard</h1>
+<div class="wrapper">
+<div class="container" id="dashboard">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="text-center">
+          <h1>Dashboard</h1>
 
-<h2>Inquiries</h2>
-  <% @events.each do |event| %>
-    <% event.inquiries.each do |inquiry| %>
-      <%= inquiry.status %>
-    <% end %>
-  <% end %>
+          <div class="container">
+            <h2>Inquiries</h2>
+            <% @events.each do |event| %>
+            <% event.inquiries.each do |inquiry| %>
+            <%= inquiry.status %>
+            <% end %>
+            <% end %>
+          </div>
 
-<h2>Reservations</h2>
-  <% @events.each do |event| %>
-    <% event.reservations.each do |reservation| %>
-      <%= reservation.status %>
-    <% end %>
-  <% end %>
+          <div class="container">
+            <h2>Reservations</h2>
+            <% @events.each do |event| %>
+            <% event.reservations.each do |reservation| %>
+            <%= reservation.status %>
+            <% end %>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 

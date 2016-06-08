@@ -1,5 +1,6 @@
 <h2>Resend unlock instructions</h2>
 
+
 <%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :unlock_token %>
@@ -10,6 +11,17 @@
 
   <div class="form-actions">
     <%= f.button :submit, "Resend unlock instructions" %>
+
+<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Resend unlock instructions" %>
   </div>
 <% end %>
 
