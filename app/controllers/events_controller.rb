@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.where("events.place LIKE ?", params[:search])
+    redirect_to events_path
   end
 
   def show
