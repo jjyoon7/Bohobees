@@ -13,3 +13,4 @@ class Dashboard::ReservationsController < ApplicationController
     @reservation.save!
   end
 end
+
