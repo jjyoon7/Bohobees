@@ -30,6 +30,9 @@ gem 'figaro'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave'
 
 
 # Use ActiveModel has_secure_password
@@ -48,7 +51,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'binding_of_caller'
 
-end
+
+
+ e4b70c800a32215f6002d7f022258af47e0c9d10
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
