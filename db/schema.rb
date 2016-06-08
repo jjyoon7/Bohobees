@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607110007) do
+ActiveRecord::Schema.define(version: 20160608113924) do
 
   create_table "events", force: :cascade do |t|
     t.date     "date"
@@ -57,6 +57,10 @@ ActiveRecord::Schema.define(version: 20160607110007) do
     t.string   "photo"
     t.string   "city"
     t.string   "street_address"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "token"
+    t.datetime "token_expiry"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, controllers: { registrations: 'users/registrations', omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  # devise onmiauth
+
 
   resource :profile, only: [:show, :edit, :update]
   # as a traveller you can see the search result and then choose the specific event
@@ -43,7 +47,6 @@ Rails.application.routes.draw do
   # namespace :profile do
   #   resources :users, only: :show
   # end
-
 
 
 end
