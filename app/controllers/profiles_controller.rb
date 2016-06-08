@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   def show
-    @profile = User.find(params[:id])
+    @profile = current_user
   end
 
   def edit
@@ -10,6 +10,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = User.find(params[:id])
     @profile = User.update(profile_validation)
+    redirect_to profile_path(@profile)
   end
 
   private
