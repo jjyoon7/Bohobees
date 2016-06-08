@@ -1,3 +1,15 @@
+<div class="banner" style="background: url('http://res.cloudinary.com/dvcylwwvz/image/upload/v1465384666/bohobees_banner_axfhlq.jpg') fixed;">
+  <div class="banner-content">
+    <h1> BohoBees </h1>
+    <h3> Who's Hosting? </h3>
+    <br>
+    <%= link_to "Search", events_path, class: "btn btn-primary" %>
+    <br>
+    <br>
+  </div>
+</div>
+
+
 <% @users.each do |user| %>
 <%= user.first_name %>
 

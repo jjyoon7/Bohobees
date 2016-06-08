@@ -1,0 +1,10 @@
+<h1>Event Index Page</h1>
+
+<h2>Reservations</h2>
+  <% @events.each do |event| %>
+    <% event.reservations.each do |reservation| %>
+      <%= reservation.status %>
+    <% end %>
+  <% end %>
+
+
