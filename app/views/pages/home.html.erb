@@ -2,7 +2,12 @@
 
 
 <div class="background-image">
-<h1>BohoBees</h1>
+  <div class="bohobee-h1">
+    <h1>BohoBees</h1>
+    <p>
+      Meet the locals, and share your travel story over meal!
+    </p>
+  </div>
 </div>
 
 
@@ -16,8 +21,8 @@
     <br>
     <%= form_tag(controller: "events", action: "index", method: "get") do %>
     <div class="search_form">
-    <%= text_field_tag :search, params[:search]%>
-    <%= submit_tag "Search"%>
+      <%= text_field_tag :search, params[:search]%>
+      <%= submit_tag "Search"%>
     </div>
     <% end %>
     <br>
