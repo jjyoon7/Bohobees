@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :profiles, only: [:show]
-
+  resource :profile, only: [:show, :edit, :update]
   # as a traveller you can see the search result and then choose the specific event
   # and then create a request to that dinner/lunch/breakfast event
   resources :events, only: [:index, :show] do
@@ -16,10 +15,10 @@ Rails.application.routes.draw do
 
   namespace :dashboard do
     # at the dashboard page, you can see your profile and also eit and update it.
-    resource :profile, only: [:show, :edit, :update]
+
 
     # at the dasboard page, you can see the event, create, edit, update everything!
-    resources :events #, only: [:edit, :update, :destroy]
+    resources :events, except: :index
 
     # as event host, you can see all your inqueries for every event and accpet or decline an inquery
     resources :inquiries, only: [:index, :show] do
