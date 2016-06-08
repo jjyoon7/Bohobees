@@ -8,17 +8,15 @@ class Dashboard::InquiriesController < ApplicationController
     # you are calling reservations on that specific event
   end
 
-  def show
-    @event = Event.find(params[:event_id])
-    @inquiry = @event.reservations()
-    redirect_to event_path
-  end
-
   def accept
-    @inquiry
+    # I need to find a specific reservation on event as host click on the event
+    # and change the status from pending to accept
+    @event = Reservation.find(params[:id])
+    @inquiry = @event.update(status: "accept")
   end
 
   def deny
-
+     @event = Reservation.find(params[:id])
+    @inquiry = @event.update(status: "deny")
   end
 end
