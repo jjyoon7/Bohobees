@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, controllers: { registrations: 'users/registrations' }
 
   resource :profile, only: [:show, :edit, :update]
   # as a traveller you can see the search result and then choose the specific event
