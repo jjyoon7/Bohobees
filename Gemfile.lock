@@ -216,12 +216,6 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
-<<<<<<< HEAD
-  byebug
-  coffee-rails (~> 4.1.0)
-  devise
-  figaro
-=======
   binding_of_caller
   bootstrap-sass
   byebug
@@ -231,7 +225,6 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-sass
->>>>>>> master
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-facebook
