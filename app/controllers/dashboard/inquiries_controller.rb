@@ -16,7 +16,7 @@ class Dashboard::InquiriesController < ApplicationController
   end
 
   def deny
-     @event = Reservation.find(params[:id])
+    @event = Reservation.find(params[:id])
     @inquiry = @event.update(status: "deny")
   end
 end
