@@ -9,13 +9,13 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = User.find(params[:id])
-    @profile = User.update()
+    @profile = User.update(profile_validation)
   end
 
   private
 
-  def
-    params.require(:user).permit()
+  def profile_validation
+    params.require(:user).permit(:email, :password, :first_name, :last_name, :photo, :city, :street_address)
   end
 
 end
