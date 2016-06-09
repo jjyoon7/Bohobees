@@ -1,36 +1,37 @@
-<h2>Edit your profile</h2>
+<div class="container">
+  <div class="row">
+  <div class="col-xs-6">
 
-<%= simple_form_for @user, url: profile_path do |f| %>
-<div class="form-inputs">
-  <%= f.input :email, required: false, autofocus: true %>
+      <h2>Edit your profile</h2>
 
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
+      <%= simple_form_for @user, url: profile_path do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email, required: false, autofocus: true %>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %> <br>
 
-  <%= f.label :last_name %>
-  <%= f.text_area :last_name %>
+        <%= f.input :first_name %>
 
-  <%= f.label :city %>
-  <%= f.text_field :city %>
+        <%= f.input :last_name %>
 
-  <%= f.label :street_address %>
-  <%= f.text_field :street_address %>
+        <%= f.input :city %>
 
-  <%= f.label :visited, class: "form-control" %>
-  <%= f.text_area :visited, class: "form-control" %>
+        <%= f.input :street_address %>
 
-  <%= f.label :future_visit, class: "form-control" %>
-  <%= f.text_area :future_visit, class: "form-control" %>
+        <%= f.input :visited, label: 'Countries you have been'%>
 
-  <%= f.label :interest, class: "form-control" %>
-  <%= f.text_area :interest, class: "form-control" %>
+        <%= f.input :future_visit, label: 'Countries you want to visit', class: "form-control" %>
 
+        <%= f.input :interest, label: 'About me', class: "form-control" %>
+
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Submit" %>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
 </div>
-
-<div class="form-actions">
-  <%= f.button :submit, "Submit" %>
-</div>
-<% end %>
