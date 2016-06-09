@@ -20,4 +20,11 @@ end
   Event.create(title: title, place: place, meal: meal, guest: guest)
 end
 
-Event.create(place: "Amsterdam", title: "Le Wagon Batch 25 Meet Up", description: "Coolest dinnerparty ever. Ya know.", meal: "dinner", guest: "28")
+Event.create(place: "Amsterdam", title: "Le Wagon Batch 25 Meet Up", description: "Coolest dinnerparty ever. Ya know.", meal: "dinner", guest: "4")
+Event.create(place: "Amsterdam", title: "Vegan Party", description: "sadflkjsdf", meal: "breakfast", guest: "28")
+Event.create(place: "Amsterdam", title: "Italian Cuisine", description: "Anything", meal: "dinner", guest: "3")
+Event.create(place: "Amsterdam", title: "Burger time!", description: "I am the best chef", meal: "lunch", guest: "2")
+Event.create(place: "Amsterdam", title: "Boozy breakfast", description: "Very nice garden to have a great breakfast", meal: "breakfast", guest: "2")
+Event.create(place: "Amsterdam", title: "Libanese food", description: "sdfksdf", meal: "dinner", guest: "2")
+Event.create(place: "Amsterdam", title: "Healthy breakfast", description: "sdfsdf", meal: "breakfast", guest: "6")
+Event.create(place: "Amsterdam", title: "Lunchtime!", description: "asdlld", meal: "lunch", guest: "4")

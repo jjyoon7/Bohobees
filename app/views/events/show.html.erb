@@ -1,13 +1,31 @@
-<div class="container eventshow">
+<div class="container">
 
-</div><h1>Event Show Page</h1>
+  <h1><%= @event.title %> </h1>
 
-<h3> <%= @event.title %> </h3>
-
-<p> Date: <%= @event.date %> </p>
-<p> Guest: <%= @event.guest %> </p>
-<p> Type of meal? <%= @event.meal %> </p>
-<p> <%= @event.place %> </p>
-<p> <%= @event.description %> </p>
+  <div class="wrapper">
+    <div class="container text-center" id="eventshow">
+      <div class="row">
+        <div class="col-xs-6">
+          <ul>
+            <li> Date: </li>
+            <li> Guest: </li>
+            <li> Type of meal: </li>
+            <li> Date: </li>
+            <li> City: </li>
+            <li> Some info on this event: </li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <ul>
+            <li> <%= @event.date %> </li>
+            <li> <%= @event.guest %> </li>
+            <li> <%= @event.meal %> </li>
+            <li> <%= @event.place %> </li>
+            <li> <%= @event.description %> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
