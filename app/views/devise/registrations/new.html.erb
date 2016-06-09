@@ -2,30 +2,47 @@
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= f.error_notification %>
+<div class="container">
+  <div class="row">
+  <div class="col-xs-4 col-xs-offset-4">
+      <div class="form-group">
+        <%= f.input :email, required: true, autofocus: true ,class: "form-control" %>
+        <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) ,class: "form-control" %>
+        <%= f.input :password_confirmation, required: true, class: "form-control" %>
+        <%= f.input :photo, class: "form-control" %>
+        <%= f.input :photo_cache, as: :hidden, class: "form-control" %>
 
-<div class="form-group">
-  <%= f.input :email, required: true, autofocus: true ,class: "form-control" %>
-  <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) ,class: "form-control" %>
-  <%= f.input :password_confirmation, required: true, class: "form-control" %>
-  <%= f.input :photo, class: "form-control" %>
-  <%= f.input :photo_cache, as: :hidden, class: "form-control" %>
+        <%= f.label :first_name, class: "form-control" %>
+        <%= f.text_field :first_name, class: "form-control" %>
 
-  <%= f.label :first_name, class: "form-control" %>
-  <%= f.text_field :first_name, class: "form-control" %>
+        <%= f.label :last_name, class: "form-control" %>
+        <%= f.text_field :last_name, class: "form-control" %>
 
-  <%= f.label :last_name, class: "form-control" %>
-  <%= f.text_area :last_name, class: "form-control" %>
+        <%= f.label :city, class: "form-control" %>
+        <%= f.text_field :city, class: "form-control" %>
 
-  <%= f.label :city, class: "form-control" %>
-  <%= f.text_field :city, class: "form-control" %>
+        <%= f.label :street_address, class: "form-control" %>
+        <%= f.text_field :street_address, class: "form-control"  %>
 
-  <%= f.label :street_address, class: "form-control" %>
-  <%= f.text_field :street_address, class: "form-control"  %>
+        <%= f.label :visited, class: "form-control" %>
+        <%= f.text_area :visited, class: "form-control" %>
+
+        <%= f.label :future_visit, class: "form-control" %>
+        <%= f.text_area :future_visit, class: "form-control" %>
+
+        <%= f.label :interest, class: "form-control" %>
+        <%= f.text_area :interest, class: "form-control" %>
+
+
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Sign up" %>
+      </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+
+    </div>
+  </div>
 </div>
-
-<div class="form-actions">
-  <%= f.button :submit, "Sign up" %>
-</div>
-<% end %>
-
-<%= render "devise/shared/links" %>
