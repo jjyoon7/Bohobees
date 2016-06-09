@@ -18,16 +18,10 @@ class User < ActiveRecord::Base
 	      user.password = Devise.friendly_token[0,20]  # Fake password for validation
 	      user.first_name = auth.info.first_name
 	      user.last_name = auth.info.last_name
-	      user.picture = auth.info.image
+	      user.photo = auth.info.image
 	      user.token = auth.credentials.token
 	      user.token_expiry = Time.at(auth.credentials.expires_at)
 		end
 	end
-
-# user_signed_in? 
-# current_user 
-# user_session  
-
-
 
 end
