@@ -2,19 +2,32 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
-.background-image {
-  background-image: url("homepage_pattern.jpg");
+ .background-image {
   background-size: cover !important;
   height: 100vh;
   z-index: -3;
 }
 
+.bohobee-h1 {
+  margin-left: 20px;
+  padding: 3em;
+}
+
+.banner-font-color {
+ color: white;
+ font-family: 'Oxygen Mono', ;
+}
+
+h1 {
+  margin-top: -1px;
+  font-family: 'Oxygen Mono', ;
+}
 /* -------------------------------------
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
 
-.container {
+ .container {
   text-align: center;
 }
 

@@ -12,4 +12,6 @@ class UsersController < ApplicationController
       user.token_expiry = Time.at(auth.credentials.expires_at)
     end
   end
+
+  
 end
