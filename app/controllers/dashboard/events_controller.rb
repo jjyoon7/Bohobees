@@ -10,7 +10,7 @@ class Dashboard::EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_validation)
+    @event = Event.new(event_params)
     @event.save
     redirect_to event_path(@event)
   end
@@ -36,7 +36,7 @@ class Dashboard::EventsController < ApplicationController
   #   @event = Event.find(params[:id])
   # end
 
-  def event_validation
+  def event_params
     params.require(:event).permit(:date, :user_id, :guest, :meal, :title, :place, :description)
   end
 end

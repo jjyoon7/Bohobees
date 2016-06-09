@@ -1,25 +1,25 @@
 <div class="wrapper search-results">
   <h1>Search results</h1>
   <div class="container">
-    <h2><%= :search %></h2>
-
-    <% @events.each do |event| %>
-    <%= event %>
+    <div class="row">
+     <% @events.each do |event| %>
+     <div class="col-xs-12 col-sm-4">
+     <%= link_to(event_path(@event)) do %>
+       <div class="card" style="background-image: url('http://res.cloudinary.com/dvcylwwvz/image/upload/v1465471202/dinner_party_bejnys.jpg');">
+         <div class="card-title"><h3><%= event.title %></h3></div>
+         <div class="card-meal">
+          <p><%= event.meal %></p>
+        </div>
+        <div class="card-guest">
+          <p> # of guests: <%= event.guest %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
     <% end %>
   </div>
 </div>
+</div>
 
 
- <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4">
-          <!-- insert <div class="card"> -->
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <!-- insert <div class="card"> -->
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <!-- insert <div class="card"> -->
-        </div>
-      </div>
-    </div>
+<!-- event.user.photo -->
