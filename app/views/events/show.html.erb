@@ -1,21 +1,20 @@
 <div class="container">
 
-  <h1><%= @event.title %> </h1>
+  <h1 class="event-title"><%= @event.title %> </h1>
 
   <div class="wrapper">
-    <div class="container text-center" id="eventshow">
+    <div class="container" id="eventshow">
       <div class="row">
-        <div class="col-xs-6">
-          <ul>
+      <div class="col-xs-3">
+          <ul class="categories">
             <li> Date: </li>
             <li> Guest: </li>
             <li> Type of meal: </li>
-            <li> Date: </li>
             <li> City: </li>
             <li> Some info on this event: </li>
           </ul>
         </div>
-        <div class="col-xs-6">
+        <div class="col-xs-3">
           <ul>
             <li> <%= @event.date %> </li>
             <li> <%= @event.guest %> </li>
@@ -23,6 +22,9 @@
             <li> <%= @event.place %> </li>
             <li> <%= @event.description %> </li>
           </ul>
+        </div>
+        <div class="col-xs-6">
+        <%= link_to "Make a request!", root_path, class: "btn btn-primary" %>
         </div>
       </div>
     </div>

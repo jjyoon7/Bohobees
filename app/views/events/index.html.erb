@@ -4,6 +4,7 @@
     <div class="row">
      <% @events.each do |event| %>
      <div class="col-xs-12 col-sm-4">
+     <%= link_to(event_path(@event)) do %>
        <div class="card" style="background-image: url('http://res.cloudinary.com/dvcylwwvz/image/upload/v1465471202/dinner_party_bejnys.jpg');">
          <div class="card-title"><h3><%= event.title %></h3></div>
          <div class="card-meal">
@@ -12,12 +13,13 @@
         <div class="card-guest">
           <p> # of guests: <%= event.guest %></p>
         </div>
-        <div class="card-user"><%= event.user_id%>
-        </div>
       </div>
+      <% end %>
     </div>
     <% end %>
   </div>
 </div>
 </div>
 
+
+<!-- event.user.photo -->

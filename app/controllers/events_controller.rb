@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.where("events.place LIKE ?", params[:search])
+    @event = Event.find(params[:id])
+    @events = Event.where("events.place LIKE ?", params[:search, :id])
   end
 
   def show
