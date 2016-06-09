@@ -1,10 +1,9 @@
-<h2>Log in</h2>
+<h2>Edit your profile</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= simple_form_for @user, url: profile_path do |f| %>
 <div class="form-inputs">
   <%= f.input :email, required: false, autofocus: true %>
-  <%= f.input :password, required: false %>
-  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
 
@@ -20,11 +19,18 @@
   <%= f.label :street_address %>
   <%= f.text_field :street_address %>
 
+  <%= f.label :visited, class: "form-control" %>
+  <%= f.text_area :visited, class: "form-control" %>
+
+  <%= f.label :future_visit, class: "form-control" %>
+  <%= f.text_area :future_visit, class: "form-control" %>
+
+  <%= f.label :interest, class: "form-control" %>
+  <%= f.text_area :interest, class: "form-control" %>
+
 </div>
 
 <div class="form-actions">
-  <%= f.button :submit, "Log in" %>
+  <%= f.button :submit, "Submit" %>
 </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
