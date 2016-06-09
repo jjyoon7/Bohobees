@@ -1,29 +1,34 @@
+<h1>Dashboard</h1>
 <div class="wrapper">
-<div class="container" id="dashboard">
+  <div class="container" id="dashboard">
     <div class="row">
-      <div class="col-xs-12">
-        <div class="text-center">
-          <h1>Dashboard</h1>
+      <div class="col-xs-6">
 
-          <div class="container">
-            <h2>Inquiries</h2>
-            <% @events.each do |event| %>
-            <% event.inquiries.each do |inquiry| %>
-            <%= inquiry.status %>
-            <% end %>
-            <% end %>
-          </div>
+        <h2>Inquiries</h2>
+        <% @events.each do |event| %>
+        <% event.inquiries.each do |inquiry| %>
+        <%= inquiry.status %>
+        <% end %>
+        <% end %>
+      </div>
 
-          <div class="container">
-            <h2>Reservations</h2>
-            <% @events.each do |event| %>
-            <% event.reservations.each do |reservation| %>
-            <%= reservation.status %>
-            <% end %>
-            <% end %>
-          </div>
+      <div class="col-xs-6">
+        <h2>Reservations</h2>
+        <% @events.each do |event| %>
+        <% event.reservations.each do |reservation| %>
+        <%= reservation.status %>
+        <% end %>
+        <% end %>
 
-        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-xs-6 col-md-offset-6">
+
+         <%= link_to t(".top_call_to_action", default: "edit your profile"), edit_profile_path, class: "dashboard-button" %>
+          <%= link_to t(".top_call_to_action", default: "edit your accout"), edit_user_registration_path, class: "dashboard-button" %>
       </div>
     </div>
   </div>

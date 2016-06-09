@@ -5,20 +5,15 @@
 
   <%= f.date_select :date %> <br>
 
-  <%= f.label :guest %>
-  <%= f.text_area :guest %> <br>
+  <%= f.input :guest %> <br>
 
-  <%= f.label :meal %>
-  <%= f.text_field :meal %> <br>
+  <%= f.input :meal, as: :select, collection: ["breakfast", "lunch", "dinner"] %> <br>
 
-  <%= f.label :title%>
-  <%= f.text_field :title %> <br>
+  <%= f.input :title%> <br>
 
-  <%= f.label :place, class: "form-control" %>
-  <%= f.text_area :place, class: "form-control" %> <br>
+  <%= f.input :place, class: "form-control" %> <br>
 
-  <%= f.label :description, class: "form-control" %>
-  <%= f.text_area :description, class: "form-control" %> <br>
+  <%= f.input :description, class: "form-control" %> <br>
 
 </div>
 
