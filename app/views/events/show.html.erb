@@ -1,10 +1,33 @@
-<h1>Event Show Page</h1>
+<div class="container">
 
-<h3> <%= @event.title %> </h3>
+  <h1 class="event-title"><%= @event.title %> </h1>
 
-<p> Date: <%= @event.date %> </p>
-<p> Guest: <%= @event.guest %> </p>
-<p> Type of meal? <%= @event.meal %> </p>
-<p> <%= @event.place %> </p>
-<p> <%= @event.description %> </p>
+  <div class="wrapper">
+    <div class="container" id="eventshow">
+      <div class="row">
+      <div class="col-xs-3">
+          <ul class="categories">
+            <li> Date: </li>
+            <li> Guest: </li>
+            <li> Type of meal: </li>
+            <li> City: </li>
+            <li> Some info on this event: </li>
+          </ul>
+        </div>
+        <div class="col-xs-3">
+          <ul>
+            <li> <%= @event.date %> </li>
+            <li> <%= @event.guest %> </li>
+            <li> <%= @event.meal %> </li>
+            <li> <%= @event.place %> </li>
+            <li> <%= @event.description %> </li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+        <%= link_to "Make a request!", root_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
 
+</div>
