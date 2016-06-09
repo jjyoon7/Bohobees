@@ -1,11 +1,18 @@
-<div class="wrapper search-results">
-  <h1>Search results</h1>
+<div class="wrapper search-results text-center">
+  <h1 class="page-title">Search results</h1>
   <div class="container">
     <div class="row">
      <% @events.each do |event| %>
      <div class="col-xs-12 col-sm-4">
-     <%= link_to(event_path(@event)) do %>
-       <div class="card" style="background-image: url('http://res.cloudinary.com/dvcylwwvz/image/upload/v1465471202/dinner_party_bejnys.jpg');">
+       <%= link_to(event_path(event)) do %>
+       <% if event.meal == "breakfast" %>
+       <% image = "http://res.cloudinary.com/dvcylwwvz/image/upload/v1465480921/breakfast_wlckue.jpg" %>
+       <% elsif event.meal == "lunch" %>
+       <% image = "http://res.cloudinary.com/dvcylwwvz/image/upload/v1465482272/lunch_obeydb.jpg" %>
+       <% else %>
+       <% image = "http://res.cloudinary.com/dvcylwwvz/image/upload/v1465482270/dinner_oh3nb2.jpg" %>
+       <% end %>
+       <div class="card" style="background-image: url('<%= image %>');">
          <div class="card-title"><h3><%= event.title %></h3></div>
          <div class="card-meal">
           <p><%= event.meal %></p>
@@ -13,6 +20,13 @@
         <div class="card-guest">
           <p> # of guests: <%= event.guest %></p>
         </div>
+        <% if event.user %>
+        <% if event.user.photo.file.nil? %>
+        <%= image_tag('http://res.cloudinary.com/dvcylwwvz/image/upload/v1465481491/Empty_Star_py08hj.svg', class: "card-user") %>
+        <% else %>
+        <%= image_tag(event.user.photo, class: "card-user") %>
+        <% end %>
+        <% end %>
       </div>
       <% end %>
     </div>
