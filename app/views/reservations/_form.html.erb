@@ -1,0 +1,14 @@
+<%= form_for([@event, @reservation]) do |f| %>
+<%= f.label :message %>
+<%= f.text_field :message %>
+<%= f.label :video_url %>
+<%= f.text_field :video_url %>
+<%= f.submit %>
+<% end %>
+
+
+
+
+<!-- how does it know which user is making the request? -->
+<!-- what is the forms URL? /events/:event_id/reservations/new(.:format) -->
+<!-- how do I make more than one redirect - one for user.traveler and one for user.host -->
