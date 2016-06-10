@@ -5,8 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+Reservation.destroy_all
 Event.destroy_all
-User.destroy_all
 
-Event.create(place: "Amsterdam", streetname: "Nassaukade 370", title: "Vegan Party", description: "sadflkjsdf", meal: "breakfast", guest: "28")
+Event.create(place: "amsterdam", streetname: "Nassaukade 370", title: "Vegan Party", description: "sadflkjsdf", meal: "breakfast", guest: "28")
