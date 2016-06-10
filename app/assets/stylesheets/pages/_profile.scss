@@ -1,19 +1,11 @@
-.container {
-background-color: grey;
-margin-top: 40px; 
+
+
+#header {
+ background-color: blue;
 }
 
-.row {
-	height: 50px; 
-	width: 50px; 
-}
-
-#header { 
- background-color: blue; 
-}
-
-#about { 
- background-color: yellow; 
+#about {
+ background-color: yellow;
 }
 
 #meals {
@@ -21,6 +13,6 @@ background-color: red;
 }
 
 #countries
-{ 
- background-color: green 
+{
+ background-color: green
 }
