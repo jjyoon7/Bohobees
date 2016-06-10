@@ -6,11 +6,11 @@
      <div class="col-xs-12 col-sm-4">
        <%= link_to(event_path(event)) do %>
        <% if event.meal == "breakfast" %>
-       <% image = "http://res.cloudinary.com/dvcylwwvz/image/upload/v1465480921/breakfast_wlckue.jpg" %>
+       <% image = "http://res.cloudinary.com/dvj9whqch/image/upload/v1465551630/breakfast_ih2rkl.jpg" %>
        <% elsif event.meal == "lunch" %>
-       <% image = "http://res.cloudinary.com/dvcylwwvz/image/upload/v1465482272/lunch_obeydb.jpg" %>
+       <% image = "http://res.cloudinary.com/dvj9whqch/image/upload/v1465551631/lunch_bj8idt.jpg" %>
        <% else %>
-       <% image = "http://res.cloudinary.com/dvcylwwvz/image/upload/v1465482270/dinner_oh3nb2.jpg" %>
+       <% image = "http://res.cloudinary.com/dvj9whqch/image/upload/v1465551631/dinner_q3dblu.jpg" %>
        <% end %>
        <div class="card" style="background-image: url('<%= image %>');">
          <div class="card-title"><h3><%= event.title %></h3></div>
@@ -34,6 +34,30 @@
   </div>
 </div>
 </div>
+
+<div id="map" style="width: 100%; height: 600px;"></div>
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).on('ready', function() {
+      handler = Gmaps.build('Google');
+      handler.buildMap({ internal: { id: 'map' } }, function(){
+        markers = handler.addMarkers(<%= raw @markers.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+    })
+  <% end %>
+<% end %>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var coord = <%= raw @event_coordinates %>;
+      alert('Event coordinates are ' + coord.lat + ', ' + coord.lng);
+    });
+  <% end %>
+<% end %>
+
 
 
 <!-- event.user.photo -->
