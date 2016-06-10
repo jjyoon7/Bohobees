@@ -5,7 +5,7 @@ class EventsController < ApplicationController
       marker.lat event.latitude
       marker.lng event.longitude
     end
-
+    session[:search_results] = params[:search]
   end
 
   def show
