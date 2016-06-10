@@ -1,26 +1,13 @@
 .container {
-background-color: grey;
+
 margin-top: 40px; 
 }
 
 .row {
 	height: 50px; 
-	width: 50px; 
 }
 
-#header { 
- background-color: blue; 
-}
-
-#about { 
- background-color: yellow; 
-}
-
-#meals {
-background-color: red;
-}
-
-#countries
-{ 
- background-color: green 
+img {
+	border-radius: 10%; 
+	max-width: 80%; 
 }

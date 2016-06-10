@@ -14,11 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-// setTimeout(function(){
-//     document.getElementById('hideMe').className = 'waa';
-// }, 5000);
-// 
+ 
 
 setTimeout(function() {
     $('#hideMe').fadeOut('slow');
