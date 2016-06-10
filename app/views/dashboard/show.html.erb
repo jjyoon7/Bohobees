@@ -1,3 +1,5 @@
+
+
 <div>
   <h1>Dashboard</h1>
 </div>
@@ -28,16 +30,20 @@
         <% end %>
         <% end %>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-xs-6">
 
-    <div class="row">
-      <div class="col-xs-6 col-md-offset-6">
-
-       <%= link_to t(".top_call_to_action", default: "edit your profile"), edit_profile_path, class: "dashboard-button" %>
-       <%= link_to t(".top_call_to_action", default: "edit your accout"), edit_user_registration_path, class: "dashboard-button" %>
+         <%= link_to t(".top_call_to_action", default: "edit your profile"), edit_profile_path, class: "dashboard-button" %>
+         <%= link_to t(".top_call_to_action", default: "edit your accout"), edit_user_registration_path, class: "dashboard-button" %>
+       </div>
      </div>
+
    </div>
  </div>
+</div>
+
+<div class="hive-bg-z-index">
+  <%= image_tag "http://res.cloudinary.com/dvj9whqch/image/upload/v1465560249/homepage_pattern2_losjdm.jpg" %>
 </div>
 
 
