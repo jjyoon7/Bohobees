@@ -11,6 +11,7 @@ class Dashboard::EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.place = @event.place.downcase
     @event.save
     redirect_to event_path(@event)
   end
