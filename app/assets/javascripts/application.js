@@ -15,3 +15,6 @@
 //= require underscore
 //= require gmaps/google
 //= require_tree .
+setTimeout(function() {
+    $('#hideMe').fadeOut('slow');
+}, 5000);
