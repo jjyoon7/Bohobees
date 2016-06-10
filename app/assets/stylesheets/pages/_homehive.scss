@@ -69,8 +69,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  background-image: -webkit-linear-gradient(left, #FFFFFF 50%, transparent 50%), -webkit-linear-gradient(right, #000 50%, transparent 50%);
-  background-image: linear-gradient(to right, #FFFFFF 50%, transparent 50%), linear-gradient(to left, #000 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(left, #FFFFFF 50%, transparent 50%), -webkit-linear-gradient(right, #FFFFFF 50%, transparent 50%);
+  background-image: linear-gradient(to right, #FFFFFF 50%, transparent 50%), linear-gradient(to left, #FFFFFF 50%, transparent 50%);
   background-repeat: repeat-y;
   background-position: 0px 0,0px 0;
 }
