@@ -1,11 +1,19 @@
-<h3> Reservaton Request for <%= @reservation.event.title %> taking place on <%= @reservation.event.date %> </h3>
+<div class="hive-bg">
+  <%= image_tag "http://res.cloudinary.com/dvj9whqch/image/upload/v1465560249/homepage_pattern2_losjdm.jpg" %>
+</div>
 
-<p>From: <%= @reservation.user.first_name %> <%= @reservation.user.last_name %></p>
-<%= @reservation.user.photo %>
-<p>Number of Guests: <%= @reservation.no_guests %></p>
-<p>Message from <%= @reservation.user.first_name %>: <%= @reservation.message %></p>
-<%= link_to "Video Message from Traveler", @reservation.video_url %>
-<p>Reservation Status: <%= @reservation.status %></p>
 
-<%= link_to "Accept Reservation", accept_dashboard_inquiry_path(@reservation), method: :patch, class: "btn btn-primary" %>
-<%= link_to "Deny Reservation", deny_dashboard_inquiry_path, method: :patch, class: "btn btn-primary" %>
+<div>
+  <h3> Reservaton Request for <%= @reservation.event.title %> taking place on <%= @reservation.event.date %> </h3>
+
+  <p>From: <%= @reservation.user.first_name %> <%= @reservation.user.last_name %></p>
+  <%= @reservation.user.photo %>
+  <p>Number of Guests: <%= @reservation.no_guests %></p>
+  <p>Message from <%= @reservation.user.first_name %>: <%= @reservation.message %></p>
+  <%= link_to "Video Message from Traveler", @reservation.video_url %>
+  <p>Reservation Status: <%= @reservation.status %></p>
+
+  <%= link_to "Accept Reservation", accept_dashboard_inquiry_path(@reservation), method: :patch, class: "btn btn-primary" %>
+  <%= link_to "Deny Reservation", deny_dashboard_inquiry_path, method: :patch, class: "btn btn-primary" %>
+
+</div>

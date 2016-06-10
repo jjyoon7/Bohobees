@@ -1,11 +1,12 @@
-<%= form_for([@event, @reservation]) do |f| %>
-<%= f.label :message %>
-<%= f.text_field :message %>
-<%= f.label :video_url %>
-<%= f.text_field :video_url %>
-<%= f.submit %>
-<% end %>
-
+<div class="hive-bg">
+  <%= form_for([@event, @reservation]) do |f| %>
+  <%= f.label :message %>
+  <%= f.text_field :message %>
+  <%= f.label :video_url %>
+  <%= f.text_field :video_url %>
+  <%= f.submit %>
+  <% end %>
+</div>
 
 
 

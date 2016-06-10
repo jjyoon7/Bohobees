@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations', omniauth_callbacks: 'users/omniauth_callbacks' }
 
   # devise onmiauth
-  
+
 
 
   resource :profile, only: [:show, :edit, :update]
@@ -28,8 +28,8 @@ Rails.application.routes.draw do
     # as event host, you can see all your inqueries for every event and accpet or decline an inquery
     resources :inquiries, only: [:index, :show] do
       member do
-        patch :accept
-        patch :deny
+        get :accept
+        get :deny
       end
     end
 

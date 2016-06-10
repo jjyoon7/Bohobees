@@ -1,7 +1,10 @@
+
+
 <div>
   <h1>Dashboard</h1>
 </div>
-<div class="wrapper">
+
+<div class="wrapper hive-bg">
   <div class="container" id="dashboard">
     <div class="row">
       <div class="col-xs-6">
@@ -13,11 +16,12 @@
 
           <% event.reservations.each do |inquiry| %>
           <%= inquiry.status %>
-          <%= link_to "Accept Reservation", accept_dashboard_inquiry_path(inquiry), method: :patch, class: "btn btn-primary" %>
-          <%= link_to "Deny Reservation", deny_dashboard_inquiry_path(inquiry), method: :patch, class: "btn btn-primary" %>
-          <% end %>
+          <%= link_to "Accept", accept_dashboard_inquiry_path(inquiry), method: :get, class: "btn btn-primary" %>
+          <%= link_to "Deny", deny_dashboard_inquiry_path(inquiry), method: :get, class: "btn btn-primary" %>
           <% end %>
         </div>
+        <% end %>
+
       </div>
 
       <div class="col-xs-6">
@@ -25,13 +29,18 @@
         <% @events.each do |event| %>
         <% event.reservations.each do |reservation| %>
         <%= reservation.status %>
+        <%= link_to "Cancel", cancel_dashboard_reservation_path(reservation), method: :get, class: "btn btn-primary" %>
         <% end %>
         <% end %>
       </div>
-    </div>
 
+    </div>
+  </div>
+
+
+  <div class="container">
     <div class="row">
-      <div class="col-xs-6 col-md-offset-6">
+    <div class="col-xs-6 col-xs-offset-6">
 
        <%= link_to t(".top_call_to_action", default: "edit your profile"), edit_profile_path, class: "dashboard-button" %>
        <%= link_to t(".top_call_to_action", default: "edit your accout"), edit_user_registration_path, class: "dashboard-button" %>
@@ -39,5 +48,9 @@
    </div>
  </div>
 </div>
+
+
+
+
 
 
