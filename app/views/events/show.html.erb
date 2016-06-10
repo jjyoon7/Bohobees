@@ -5,7 +5,7 @@
   <div class="wrapper">
     <div class="container">
       <div class="row">
-      <div class="col-xs-3">
+        <div class="col-xs-3">
           <ul class="categories">
             <li> Date: </li>
             <li> # of Guests: </li>
@@ -23,9 +23,21 @@
             <li> <%= @event.description %> </li>
           </ul>
         </div>
-        <div class="col-xs-6">
-        <%= link_to "Make a request!", new_event_reservation_path(@event), class: "btn btn-primary" %>
-        <%= link_to "Back to search results", events_path, class: "btn btn-primary" %>
+        <div class="col-xs-3">
+          <% if @event.user %>
+            <% if @event.user.photo.file.nil? %>
+              <%= image_tag('http://res.cloudinary.com/dvcylwwvz/image/upload/v1465481491/Empty_Star_py08hj.svg', class: "card-user") %>
+            <% else %>
+              <%= image_tag(@event.user.photo, class: "card-user") %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-xs-3">
+        </div>
+        <div class="col-xs-12">
+
+          <%= link_to "Make a request!", new_event_reservation_path(@event), class: "btn sab-button" %>
+          <%= link_to "Back to search results", events_path, class: "btn sab-button" %>
         </div>
       </div>
     </div>
