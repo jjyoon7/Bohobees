@@ -5,7 +5,7 @@
  .background-image {
   background-size: cover !important;
   height: 100vh;
-  z-index: -3;
+  z-index: -5;
 }
 
 .bohobee-h1 {
@@ -27,9 +27,11 @@ h1 {
  * (margin/padding adjustments)
  * ------------------------------------- */
 
- .container {
-  text-align: center;
+.search-bakcground {
+background-image: url('road.gif');
+background-size: cover;
 }
+
 
 .banner {
   color: white;
