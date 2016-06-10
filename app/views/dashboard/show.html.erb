@@ -8,12 +8,16 @@
 
         <h2>Inquiries</h2>
         <% @events.each do |event| %>
-        <% event.inquiries.each do |inquiry| %>
-        <%= inquiry.status %>
-        <%= link_to "Accept Reservation", accept_dashboard_inquiry_path(inquiry), method: :patch, class: "btn btn-primary" %>
-        <%= link_to "Deny Reservation", deny_dashboard_inquiry_path, method: :patch, class: "btn btn-primary" %>
-        <% end %>
-        <% end %>
+        <div>
+          <%= link_to event.title, event_path(event) %>
+
+          <% event.reservations.each do |inquiry| %>
+          <%= inquiry.status %>
+          <%= link_to "Accept Reservation", accept_dashboard_inquiry_path(inquiry), method: :patch, class: "btn btn-primary" %>
+          <%= link_to "Deny Reservation", deny_dashboard_inquiry_path(inquiry), method: :patch, class: "btn btn-primary" %>
+          <% end %>
+          <% end %>
+        </div>
       </div>
 
       <div class="col-xs-6">
@@ -23,8 +27,6 @@
         <%= reservation.status %>
         <% end %>
         <% end %>
-
-
       </div>
     </div>
 

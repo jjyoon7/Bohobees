@@ -8,29 +8,4 @@
 Reservation.destroy_all
 Event.destroy_all
 
-# 20.times do
-#   first_name = Faker::Name.first_name
-#   last_name = Faker::Name.last_name
-#   User.create(first_name: first_name, last_name: last_name)
-# end
-
-20.times do
-  title = Faker::Book.title
-  place = Faker::Address.city
-  guest = Faker::Number.between(1, 10)
-  meal = "dinner"
-  Event.create(title: title, place: place, meal: meal, guest: guest, user: User.first)
-end
-
-# Event.create(place: "Amsterdam", title: "Le Wagon Batch 25 Meet Up", description: "Coolest dinnerparty ever. Ya know.", meal: "dinner", guest: "4", user: User.first)
-# Event.create(place: "Amsterdam", title: "Vegan Party", description: "sadflkjsdf", meal: "breakfast", guest: "28", user: User.last)
-# Event.create(place: "Amsterdam", title: "Italian Cuisine", description: "Anything", meal: "dinner", guest: "3")
-# Event.create(place: "Amsterdam", title: "Burger time!", description: "I am the best chef", meal: "lunch", guest: "2")
-# Event.create(place: "Amsterdam", title: "Boozy breakfast", description: "Very nice garden to have a great breakfast", meal: "breakfast", guest: "2")
-# Event.create(place: "Amsterdam", title: "Libanese food", description: "sdfksdf", meal: "dinner", guest: "2")
-# Event.create(place: "Amsterdam", title: "Healthy breakfast", description: "sdfsdf", meal: "breakfast", guest: "6")
-# Event.create(place: "Amsterdam", title: "Lunchtime!", description: "asdlld", meal: "lunch", guest: "4")
-
-20.times do
-  Reservation.create(event: Event.first, user: User.first, message: "test message", video_url:"test.com", no_guests: 1)
-end
+Event.create(place: "Amsterdam", streetname: "Nassaukade 370", title: "Vegan Party", description: "sadflkjsdf", meal: "breakfast", guest: "28")

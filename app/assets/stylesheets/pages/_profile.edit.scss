@@ -1,3 +1,23 @@
-.profile-edit-form {
-  font-family: O
+
+ h2 { 
+ 	color: #FFC81E}
+
+ .form-inputs { 
+ 	color: green;
+ 	input, textarea {
+	    width: 100%;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    box-sizing: border-box;
+	    color: black;
+		}
+ }
+input[type=button], input[type=submit] {
+    background-color: #008000;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }

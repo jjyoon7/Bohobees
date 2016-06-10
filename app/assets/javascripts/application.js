@@ -15,7 +15,6 @@
 //= require underscore
 //= require gmaps/google
 //= require_tree .
-
-setTimeout(function(){
-    document.getElementById('hideMe').className = 'waa';
+setTimeout(function() {
+    $('#hideMe').fadeOut('slow');
 }, 5000);
