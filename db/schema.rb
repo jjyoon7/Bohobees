@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20160610084236) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "streetname"
   end
 
   add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
