@@ -24,5 +24,6 @@ class Dashboard::InquiriesController < ApplicationController
     @event = Reservation.find(params[:id])
     @inquiry = @event.update(status: "deny")
     redirect_to dashboard_path
+
   end
 end
