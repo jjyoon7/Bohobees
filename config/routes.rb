@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     # as traveller, you can see all your reservations and cancel a reservation
     resources :reservations, only: [:index, :show] do
       member do
-        patch :cancel
+        get :cancel
       end
     end
   end
