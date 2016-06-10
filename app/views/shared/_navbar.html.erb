@@ -2,7 +2,7 @@
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
 
-    <%= image_tag "bee_new_logo.jpg" %>
+  <%= image_tag "http://res.cloudinary.com/dvj9whqch/image/upload/v1465557656/bee_new_logo_ltsf24.jpg" %>
 
   <% end %>
 
@@ -78,7 +78,7 @@
   </div>
 </div>
 
-<% content_for :js do %>
+<% content_for :after_js do %>
   <script>
    $(document).ready(function(){
     $("#navbar-wagon-menu").click(function(){
