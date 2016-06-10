@@ -25,19 +25,23 @@
         </div>
         <div class="col-xs-3">
           <% if @event.user %>
-            <% if @event.user.photo.file.nil? %>
-              <%= image_tag('http://res.cloudinary.com/dvcylwwvz/image/upload/v1465481491/Empty_Star_py08hj.svg', class: "card-user") %>
-            <% else %>
-              <%= image_tag(@event.user.photo, class: "card-user") %>
-            <% end %>
+          <% if @event.user.photo.file.nil? %>
+          <%= image_tag('http://res.cloudinary.com/dvcylwwvz/image/upload/v1465481491/Empty_Star_py08hj.svg', class: "card-user") %>
+          <% else %>
+          <%= image_tag(@event.user.photo, class: "profile_picture") %>
+          <% end %>
           <% end %>
         </div>
         <div class="col-xs-3">
+          <%= link_to "View host's profile", profile_path(@event), class: "btn sab-button" %>
+          <br>
+          <br>
+          <%= link_to "Make a request!", new_event_reservation_path(@event), class: "btn sab-button" %>
+          <br>
+          <br>
+          <%= link_to "Back to search results", events_path(search: session[:search_results]), class: "btn sab-button" %>
         </div>
         <div class="col-xs-12">
-
-          <%= link_to "Make a request!", new_event_reservation_path(@event), class: "btn sab-button" %>
-          <%= link_to "Back to search results", events_path(search: session[:search_results]), class: "btn sab-button" %>
         </div>
       </div>
     </div>

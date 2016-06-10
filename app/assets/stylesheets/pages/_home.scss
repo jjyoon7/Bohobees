@@ -2,6 +2,14 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+ .home_search_field {
+  padding: 24px;
+ }
+
+.btn-success {
+  border-radius: 5pt;
+}
+
  .background-image {
   background-size: cover !important;
   height: 100vh;
@@ -74,7 +82,6 @@ background-size: cover;
 .sab-button {
   background-color: #FEC81E;
   border: 0px;
-  height: 40px;
   border-radius: 5px;
   color: white;
   padding: 15px 15px 15px 15px;

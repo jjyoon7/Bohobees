@@ -76,8 +76,8 @@
     <br>
     <%= form_tag({controller: "events", action: "index"}, method: :get) do %>
     <div class="search_form">
-      <%= text_field_tag :search, params[:search], placeholder: "Type city here .."%>
-      <%= submit_tag "Search", class: "btn btn-danger sab-button"%>
+      <%= text_field_tag :search, params[:search], placeholder: "Type city here ..", class: "home_search_field"%>
+      <%= submit_tag "Search", class: "btn btn-success"%>
     </div>
     <% end %>
     <br>
