@@ -61,4 +61,29 @@ h1 {
 
 .search_form {
   color: black;
+  height: 50px;
+}
+
+.sab-button {
+  background-color: #FEC81E;
+  border: 0px;
+}
+
+.sab-button {
+  background-color: #FEC81E;
+  border: 0px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.sab-button:hover {
+  background-color: #FEC81E;
+  border: 0px;
+}
+
+#search {
+  height: 40px;
+  border-radius: 5px;
+  border-color: white;
+  width: 200px;
 }
