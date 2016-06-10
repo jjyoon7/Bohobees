@@ -1,13 +1,13 @@
 class ReservationsController < ApplicationController
+
   def new
-    @reservation = Reservation.new
     @event = event_params
+    @reservation = Reservation.new(user_id: current_user.id, event_id: @event.id)
   end
 
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.save!
-    @reservation.event_id = @event
     redirect_to dashboard_path
     # not sure if this path is alright?
   end
@@ -18,6 +18,9 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+    @message = @reservation.message
+    @approve = approve
+    @disapprove = disapprove
   end
 
   def cancel
@@ -29,7 +32,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:user_id, :status, :message)
+    params.require(:reservation).permit(:user_id, :status, :message, :video_url, :event_id)
   end
 
   def event_params
