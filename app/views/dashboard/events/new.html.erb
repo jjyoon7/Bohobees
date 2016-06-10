@@ -1,25 +1,32 @@
-<h2>Host a meal!</h2>
+<div class="container" class="form">
+	<div class="row">
+		<div class="col-xs-6">
 
-<%= simple_form_for @event, url: dashboard_events_path do |f| %>
-<div class="form-inputs">
+			<h2>Host a meal!</h2>
 
-  <%= f.date_select :date, label: 'Date of this event' %> <br>
+			<%= simple_form_for @event, url: dashboard_events_path do |f| %>
+			<div class="form-inputs">
 
-  <%= f.input :guest, label: "# of guests " %> <br>
+				<%= f.date_select :date, label: 'Date of this event' %> <br>
 
-  <%= f.input :meal, label: "Breakfast, lunch or dinner? ", as: :select, collection: ["Breakfast", "Lunch", "Dinner"] %> <br>
+				<%= f.input :guest, label: "# of guests " %> <br>
 
-  <%= f.input :title%> <br>
+				<%= f.input :meal, label: "Breakfast, lunch or dinner? ", as: :select, collection: ["Breakfast", "Lunch", "Dinner"] %> <br>
 
-  <%= f.input :streetname, label: "Streetname + number " %> <br>
+				<%= f.input :title%> <br>
 
-  <%= f.input :place, class: "form-control", label: "City" %> <br>
+				<%= f.input :streetname, label: "Streetname + number " %> <br>
 
-  <%= f.input :description, class: "form-control", label: "Please provid your future guests with a little extra info about your event " %> <br>
+				<%= f.input :place, class: "form-control", label: "City" %> <br>
 
+				<%= f.input :description, class: "form-control", label: "Please provid your future guests with a little extra info about your event " %> <br>
+
+			</div>
+
+			<div class="form-actions">
+				<%= f.button :submit, "Submit" %>
+			</div>
+			<% end %>
+		</div>
+	</div>
 </div>
-
-<div class="form-actions">
-  <%= f.button :submit, "Submit" %>
-</div>
-<% end %>
