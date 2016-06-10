@@ -1,17 +1,31 @@
-D
+
  h2 { 
  	color: #FFC81E}
 
  .form-inputs { 
  	color: green;
- 	input {
+ 	input, textarea {
 	    width: 100%;
 	    padding: 12px 20px;
 	    margin: 8px 0;
 	    box-sizing: border-box;
 	    color: black;
 		}
-
-
  }
+.submit-btn {
+  margin-left: 10px;
+  padding: 0 20px;
+  border-radius: 20em;
+  line-height: 40px;
+  background-color: #41A547;
+  color: white;
+  font-size: 14px;
+  border: 2px solid #41A547;
+}
+.submit-btn:hover {
+  color: white;
+  background: green;
+  border-color: #00750F;
+  text-decoration: none;
+}
 

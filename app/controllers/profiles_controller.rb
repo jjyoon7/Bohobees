@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   def show
     @profile = current_user
+    # @event = Event.find(params[:id])
   end
 
   def edit
