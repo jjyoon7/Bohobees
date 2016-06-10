@@ -28,3 +28,5 @@ Event.create(place: "Amsterdam", title: "Boozy breakfast", description: "Very ni
 Event.create(place: "Amsterdam", title: "Libanese food", description: "sdfksdf", meal: "dinner", guest: "2")
 Event.create(place: "Amsterdam", title: "Healthy breakfast", description: "sdfsdf", meal: "breakfast", guest: "6")
 Event.create(place: "Amsterdam", title: "Lunchtime!", description: "asdlld", meal: "lunch", guest: "4")
+
+Reservation.create(event_id: 2, user_id: 6, message: "test message", video_url:"test.com", no_guests: 1)
