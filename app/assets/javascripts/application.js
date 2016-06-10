@@ -15,7 +15,3 @@
 //= require underscore
 //= require gmaps/google
 //= require_tree .
-
-setTimeout(function(){
-    document.getElementById('hideMe').className = 'waa';
-}, 5000);
