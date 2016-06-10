@@ -1,25 +1,37 @@
-<h2>Host a meal!</h2>
 
-<%= simple_form_for @event, url: dashboard_events_path do |f| %>
-<div class="form-inputs hive-bg">
+<div class="container hive-bg" class="form">
 
-  <%= f.date_select :date, label: 'Date of this event' %> <br>
 
-  <%= f.input :guest, label: "# of guests " %> <br>
+  <div class="row">
+    <div class="col-xs-6">
 
-  <%= f.input :meal, label: "Breakfast, lunch or dinner? ", as: :select, collection: ["breakfast", "lunch", "dinner"] %> <br>
+      <h2>Host a meal!</h2>
 
-  <%= f.input :title%> <br>
 
-  <%= f.input :streetname, label: "Streetname + number " %> <br>
 
-  <%= f.input :place, class: "form-control", label: "City" %> <br>
+      <%= simple_form_for @event, url: dashboard_events_path do |f| %>
+      <div class="form-inputs hive-bg">
 
-  <%= f.input :description, class: "form-control", label: "Please provid your future guests with a little extra info about your event " %> <br>
+        <%= f.date_select :date, label: 'Date of this event' %> <br>
 
+        <%= f.input :guest, label: "# of guests " %> <br>
+
+        <%= f.input :meal, label: "Breakfast, lunch or dinner? ", as: :select, collection: ["breakfast", "lunch", "dinner"] %> <br>
+
+        <%= f.input :title%> <br>
+
+        <%= f.input :streetname, label: "Streetname + number " %> <br>
+
+        <%= f.input :place, class: "form-control", label: "City" %> <br>
+
+        <%= f.input :description, class: "form-control", label: "Please provid your future guests with a little extra info about your event " %> <br>
+
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Submit" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-<div class="form-actions">
-  <%= f.button :submit, "Submit" %>
-</div>
-<% end %>
