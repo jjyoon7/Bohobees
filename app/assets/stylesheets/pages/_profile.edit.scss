@@ -12,20 +12,12 @@
 	    color: black;
 		}
  }
-.submit-btn {
-  margin-left: 10px;
-  padding: 0 20px;
-  border-radius: 20em;
-  line-height: 40px;
-  background-color: #41A547;
-  color: white;
-  font-size: 14px;
-  border: 2px solid #41A547;
+input[type=button], input[type=submit] {
+    background-color: #008000;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
-.submit-btn:hover {
-  color: white;
-  background: green;
-  border-color: #00750F;
-  text-decoration: none;
-}
-
