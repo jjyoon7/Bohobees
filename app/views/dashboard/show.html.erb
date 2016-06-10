@@ -29,7 +29,7 @@
         <% @events.each do |event| %>
         <% event.reservations.each do |reservation| %>
         <%= reservation.status %>
-        <%= link_to "Cancel", cancel_dashboard_reservation_path(reservation), method: :get, class: "btn btn-primary" %>
+        <%= link_to "Cancel", cancel_dashboard_reservation_path(reservation), method: :patch, class: "btn btn-primary" %>
         <% end %>
         <% end %>
       </div>
