@@ -1,4 +1,6 @@
-<h1>Dashboard</h1>
+<div>
+  <h1>Dashboard</h1>
+</div>
 <div class="wrapper">
   <div class="container" id="dashboard">
     <div class="row">
@@ -6,10 +8,16 @@
 
         <h2>Inquiries</h2>
         <% @events.each do |event| %>
-        <% event.inquiries.each do |inquiry| %>
-        <%= inquiry.status %>
-        <% end %>
-        <% end %>
+        <div>
+          <%= link_to event.title, event_path(event) %>
+
+          <% event.reservations.each do |inquiry| %>
+          <%= inquiry.status %>
+          <%= link_to "Accept Reservation", accept_dashboard_inquiry_path(inquiry), method: :patch, class: "btn btn-primary" %>
+          <%= link_to "Deny Reservation", deny_dashboard_inquiry_path(inquiry), method: :patch, class: "btn btn-primary" %>
+          <% end %>
+          <% end %>
+        </div>
       </div>
 
       <div class="col-xs-6">
@@ -19,19 +27,17 @@
         <%= reservation.status %>
         <% end %>
         <% end %>
-
-
       </div>
     </div>
 
     <div class="row">
-    <div class="col-xs-6 col-md-offset-6">
+      <div class="col-xs-6 col-md-offset-6">
 
-         <%= link_to t(".top_call_to_action", default: "edit your profile"), edit_profile_path, class: "dashboard-button" %>
-          <%= link_to t(".top_call_to_action", default: "edit your accout"), edit_user_registration_path, class: "dashboard-button" %>
-      </div>
-    </div>
-  </div>
+       <%= link_to t(".top_call_to_action", default: "edit your profile"), edit_profile_path, class: "dashboard-button" %>
+       <%= link_to t(".top_call_to_action", default: "edit your accout"), edit_user_registration_path, class: "dashboard-button" %>
+     </div>
+   </div>
+ </div>
 </div>
 
 
